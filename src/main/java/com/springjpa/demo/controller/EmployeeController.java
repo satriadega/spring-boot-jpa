@@ -31,7 +31,7 @@ public class EmployeeController {
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id) {
+  public ResponseEntity<Employee> getEmployeeById(@PathVariable String id) {
     Optional<Employee> employee = employeeService.findById(id);
     return employee.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
   }
@@ -42,7 +42,7 @@ public class EmployeeController {
   }
 
   @PutMapping("/{id}")
-  public ResponseEntity<Employee> updateEmployee(@PathVariable Long id, @RequestBody Employee employeeDetails) {
+  public ResponseEntity<Employee> updateEmployee(@PathVariable String id, @RequestBody Employee employeeDetails) {
     Optional<Employee> employeeOptional = employeeService.findById(id);
     if (employeeOptional.isPresent()) {
       Employee employee = employeeOptional.get();
@@ -55,7 +55,7 @@ public class EmployeeController {
   }
 
   @DeleteMapping("/{id}")
-  public ResponseEntity<Void> deleteEmployee(@PathVariable Long id) {
+  public ResponseEntity<Void> deleteEmployee(@PathVariable String id) {
     employeeService.deleteById(id);
     return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
   }
