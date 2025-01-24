@@ -71,6 +71,18 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>10.10.0</version>
+				<configuration>
+						<url>jdbc:mysql://localhost:6663/springjpa</url> <!-- Replace with your database URL -->
+						<user>root</user>
+						<password>root</password>
+						<schemas>springjpa</schemas>
+						<locations>filesystem:src/main/resources/db/migration</locations>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
