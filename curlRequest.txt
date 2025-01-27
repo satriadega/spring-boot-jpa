@@ -1,0 +1,14 @@
+Building a RESTful Web Service
+
+1.
+
+curl -X GET \
+  http://localhost:8080/api/test/hello?name=John%20Doe \
+  -H 'Content-Type: application/json'
+
+2. 
+
+curl -X GET \                                                                                                                                                                                                                                                                                            ──(Tue,Jan28)─┘
+  http://localhost:8080/api/test/greeting\?name\=John%20Doe \
+  -H 'Content-Type: application/json'
+
