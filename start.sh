@@ -1,1 +1,1 @@
-mvn spring-boot:run
+sudo mvn spring-boot:run

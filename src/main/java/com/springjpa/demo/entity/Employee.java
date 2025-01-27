@@ -25,6 +25,7 @@ import lombok.NoArgsConstructor;
 @EntityListeners(AuditingEntityListener.class)
 public class Employee {
 
+  @SuppressWarnings("deprecation")
   @Id
   @GeneratedValue(generator = "CustomUUIDGenerator")
   @GenericGenerator(name = "CustomUUIDGenerator", strategy = "com.springjpa.demo.generator.CustomUUIDGenerator")

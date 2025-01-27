@@ -55,11 +55,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>6.2.7.Final</version>
-    </dependency>
+    </dependency> -->
 	</dependencies>
 
 	<build>
@@ -79,7 +79,7 @@
 			<plugin>
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
-				<version>10.10.0</version>
+				<!-- <version>10.10.0</version> -->
 				<configuration>
 						<url>jdbc:mysql://localhost:6663/springjpa</url> <!-- Replace with your database URL -->
 						<user>root</user>
