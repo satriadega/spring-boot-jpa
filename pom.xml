@@ -81,7 +81,7 @@
 				<artifactId>flyway-maven-plugin</artifactId>
 				<!-- <version>10.10.0</version> -->
 				<configuration>
-						<url>jdbc:mysql://localhost:6663/springjpa</url> <!-- Replace with your database URL -->
+						<url>jdbc:mysql://192.168.0.102:6663/springjpa</url> <!-- Replace with your database URL -->
 						<user>root</user>
 						<password>root</password>
 						<schemas>springjpa</schemas>
